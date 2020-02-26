@@ -9,8 +9,7 @@
     </div>
 
   <h3>Reviews</h3>
-  <%= link_to 'Add new review', new_restaurant_review_path(@restaurant) %>
-  <div class="row">
+    <div class="row">
       <% @reviews.each do |review| %>
         <div class="col-12">
           <div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -22,5 +21,6 @@
         </div>
       <% end %>
   </div>
+  <%= render 'reviews/form', review: @review, restaurant: @restaurant %>
 </div>
 
